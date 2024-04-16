@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/white"
+    tools:context=".User_Reg">
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="sans-serif-medium"
+        android:text="MPTS"
+        android:textColor="#0D42FD"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView3"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textSize="30dp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        android:textColor="#0D42FD"-->
+    <!--        android:text="MPTS" />-->
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="197dp"
+        android:layout_height="200dp"
+
+
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Register"
+        android:textSize="40dp"
+        android:textColor="#0D42FD"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+    <EditText
+        android:id="@+id/edt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/baseline_person_24"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter Name"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/baseline_location_on_24"
+
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Enter Place"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/edt3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:hint="Enter Phone Number"
+        android:drawableLeft="@drawable/baseline_phone_24"
+        android:textColorHint="@color/black"/>
+
+    <EditText
+        android:id="@+id/edt4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Enter Email"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/baseline_email_24"/>
+    <EditText
+        android:id="@+id/edt5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="upload id proof"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:drawableLeft="@drawable/baseline_email_24"/>
+    <EditText
+        android:id="@+id/edt6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Enter username"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/baseline_person_24"
+        />
+    <EditText
+        android:id="@+id/edt7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Enter password"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/baseline_remove_red_eye_24"/>
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextText4"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textColor="@color/white"-->
+
+    <!--        android:ems="10"-->
+    <!--        android:inputType="text"-->
+    <!--        android:hint="Enter idproof"-->
+    <!--        android:textColorHint="@color/black"/>-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:background="#0D42FE"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        />
+
+
+</LinearLayout>

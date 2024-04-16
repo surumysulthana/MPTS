@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:padding="20dp"
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#032068"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        android:layout_marginTop="-80dp"
+        android:layout_gravity="center"
+        android:text="welcome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#032068"
+        android:textSize="16.7dp"
+        android:layout_marginBottom="30dp"
+        android:text="Sign in to continue"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        style="@style/CustomTextInputLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:textColorHint="#032068"
+        android:hint="Enter Username"
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etunm"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etpassd"
+        style="@style/CustomTextInputLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="32dp"
+        android:textColorHint="#032068"
+        android:hint="Enter Password"
+        app:endIconMode="password_toggle"
+        app:endIconTint="#032068"> <!-- This line adds the show password icon -->
+
+        <!-- This is the actual edit text which takes the input -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etpass"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbtn"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:background="@drawable/button_curve"
+        android:text="LOGIN" />
+
+    <TextView
+        android:id="@+id/textview4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign UP"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textColorHint="#000"
+        android:layout_marginBottom="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>

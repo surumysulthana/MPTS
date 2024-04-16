@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MPTS</string>
+    <string-array name="details"></string-array>
+    <item name="name" type="string">Name</item>
+    <item name="desigination" type="string">Desiginition</item>
+    <item name="phone" type="string">Phone</item>
+    <item name="email" type="string">Email</item>
+    <item name="idproof" type="string">Idproof</item>
+</resources>

@@ -1,0 +1,144 @@
+{%include 'admin_header.html'%}
+
+<br><br><br><br><br>
+
+
+
+<center>
+    <h1>Request</h1>
+    <br><br>
+
+    <table class="table" style="width: 1200px;">
+        <tr>
+            <thead class="table-secondary">
+                <th>Sl.No</th>
+                <th>User</th>
+                <th>title</th>
+                <th>reason</th>
+                <th>from date</th>
+                <th>from time</th>
+                <th> from location</th>
+                <th>to location</th>
+                <th>QR code</th>
+                <th>Face image</th>
+                <th>date</th>
+                <th>staus</th>
+
+            </thead>
+
+        </tr>
+        <tr id="ty">
+            {% for i in data['view']%}
+
+            <td>{{i['permit_request_id']}}</td>
+            <td>{{i['name']}}</td>
+            <td>{{i['title']}}</td>
+            <td>{{i['reason']}}</td>
+            <td>{{i['from_date']}}</td>
+            <td>{{i['from_time']}}</td>
+            <td>{{i['from_location']}}</td>
+            <td>{{i['to_location']}}</td>
+            <td><img src="{{i['qr_code']}}" width="200px" height="200px" alt=""></td>
+            <td>
+                <img src="{{i['face_image']}}" width="200px" height="200px" alt="">
+            </td>
+            <td>{{i['date']}}</td>
+            {%if i['status'] == 'pending'%}
+            <td><a href="?action=accept&id={{i['permit_request_id']}}" class="btn btn-success">Accept</a></td>
+            <td><a href="?action=delete&id={{i['permit_request_id']}}" class="btn btn-danger">Reject</a></td>
+            
+            {%else%}
+            <td>{{i['status']}}</td>
+            {%endif%}
+
+        </tr>
+        {%endfor%}
+
+
+    </table>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br>
+<br><br><br><br><br>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+        <h3><center>REQUESTS</center></h3>
+        
+        <center>
+            <table border="1">
+            <tr>
+                <th>title</th>
+                <th>reason</th>
+                <th>from date</th>
+                <th>from time</th>
+                <th> from location</th>
+                <th>to location</th>
+                <th>QR code</th>
+                <th>Face image</th>
+                <th>date</th>
+                <th>staus</th>
+                <th>name</th>
+                <th>place</th>
+                <th>phone</th>
+                <th>email</th>
+                <th>id_proof</th>
+            </tr>
+            
+            {% for i in data['view']%}
+            <tr>
+                <td>{{i['title']}}</td>
+                <td>{{i['reason']}}</td>
+                <td>{{i['from_date']}}</td>
+                <td>{{i['from_time']}}</td>
+                <td>{{i['from_location']}}</td>
+                <td>{{i['to_location']}}</td>
+                <td>{{i['qr_code']}}</td>
+                <td>{{i['face_image']}}</td>
+                <td>{{i['date']}}</td>
+                <td>{{i['status']}}</td>
+                
+                <td>{{i['name']}}</td>
+                <td>{{i['place']}}</td>
+                <td>{{i['phone']}}</td>
+                <td>{{i['email']}}</td>
+                <td>{{i['id_proof']}}</td>
+
+
+
+                <td><a href="?action=accept&id={{i['permit_request_id']}}">accept</a></td>
+                <td><a href="?action=reject&id={{i['permit_request_id']}}">reject</a></td>
+                
+
+                
+
+            </tr>
+            {%endfor%}
+            
+        </table>
+        </center>
+    
+</body>
+</html> -->
+{%include 'footer.html'%}

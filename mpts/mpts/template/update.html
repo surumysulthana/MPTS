@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if  data['view'] %}
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th>
+                    name
+                </th>
+                <td>
+                    <input type="text" name="name" value="{{data['view'][0]['name']}}">
+                </td>
+            </tr>
+            <tr>
+                <th>Desigination</th>
+                <th><input type="text" name="desi" value="{{data['view'][0]['designation']}}"></th>
+            </tr>
+            <tr><th>Phone</th>
+            <td><input type="text" name="phone" value="{{data['view'][0]['phone']}}"></td></tr>
+            <tr><th>email</th><td><input type="text" name="mail" value="{{data['view'][0]['email']}}"></td></tr>
+            <tr>
+                <th>idproof</th>
+                <td><input type="text" name="idproof" value="{{data['view'][0]['id_proof']}}"></td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><input type="submit" name="update" value="update"></td>
+            </tr>
+        </table>
+    </form>
+    {%endif%}
+</body>
+</html>

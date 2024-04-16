@@ -1,0 +1,47 @@
+{% include 'admin_header.html' %}
+<br><br><br><br><br>
+
+<center>
+
+    <h1>View User</h1>
+    <br><br>
+    <table class="table" style="width: 1200px;">
+        <tr>
+            <thead class="table-secondary">
+                <th>user_id</th>
+                <th>login_id</th>
+                <th>name</th>
+                <th>place</th>
+                <th>phone</th>
+                <th>email</th>
+                <th>id_proof</th>
+                <!-- <th>Actions</th> -->
+            </thead>
+        </tr>
+        <tr id="ty">
+            {% for i in data['views'] %}
+            <tr>
+                <td>{{i['user_id']}}</td>
+                <td>{{i['login_id']}}</td>
+                <td>{{i['name']}}</td>
+                <td>{{i['place']}}</td>
+                <td>{{i['phone']}}</td>
+                <td>{{i['email']}}</td>
+                <!-- <td>
+                    <a href="{{i['id_proof']}}" target="_blank">View PDF</a>
+                </td> -->
+                <td>
+                    <button class="btn btn-danger" onclick="viewPDF('{{i['id_proof']}}')">View PDF</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+</center>
+{% include 'footer.html' %}
+
+<script>
+    function viewPDF(pdfUrl) {
+        window.open(pdfUrl, '_blank');
+    }
+</script>

@@ -1,0 +1,88 @@
+{%include 'admin_header.html'%}
+<br><br><br><br><br>
+
+
+<center>
+    <h1>complaints</h1>
+    <br><br>
+
+    <table class="table" style="width: 1200px;">
+        <tr>
+            <thead  class="table-secondary">
+                <th>Title</th>
+                <th>Description</th>
+                <th>Reply</th>
+                <th>Date</th>
+                <!-- <th>Phone</th>
+                <th>Email</th>
+                <th>ID Proof</th>
+                <th</th> -->
+                <th></th>
+                <th></th>
+
+            </thead>
+ 
+        </tr>
+        <tr id="ty">
+          {% for i in data['view']%}
+                  <tr>
+                    <td>{{i['title'] }}</td>
+                    <td>{{i['description'] }}</td>
+        
+                    {%if i['reply'] == 'pending'%}
+                    <td><a href="/admin_reply?id={{i['complaint_id']}}" class="btn btn-success">Reply</a></td>
+                    {%else%}
+                    <td>{{i['reply']}}</td>
+                    {%endif%}
+                 <td>{{i['date'] }}</td>
+                  <!-- <td>{{i['authority_id']}}</td>
+                  <td>{{i['login_id']}}</td>
+                  <td>{{i['name']}}</td>
+                  <td>{{i['designation']}}</td>
+                  <td>{{i['phone']}}</td>
+                  <td>{{i['email']}}</td>
+                  <td>{{i['id_proof']}}</td>
+                  <td><a href="?action=accept&id={{i['authority_id']}}" class="btn btn-success">Accept</a></td>
+                  <td><a href="?action=delete&id={{i['authority_id']}}" class="btn btn-danger">Reject</a></td> -->
+                  
+                  </tr>
+                  {%endfor%}
+                  
+        
+      </table>
+</center>
+<br><br><br><br>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <center>   <h1>complaints</h1></center>
+ <form action="" method="post">
+    <table border="1">
+        <tr>
+        <th>Title</th>
+        <th>Discription</th>
+        <th>reply</th>
+        <th>date</th>
+    </tr>
+    
+    {% for i in data['view']%}
+    <tr>
+        <td>{{i['title'] }}</td>
+        <td>{{i['description'] }}</td>
+        
+        <td><a href="/admin_reply?id={{i['complaint_id']}}">reply</a></td>
+        <td>{{i['date'] }}</td>
+
+    </tr>
+    {%endfor%}
+    </table>
+ </form>
+</body>
+</html> -->
+{%include 'footer.html'%}

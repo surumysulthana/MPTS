@@ -1,0 +1,61 @@
+{%include 'admin_header.html'%}
+<br><br><br><br><br>
+
+
+<center>
+    <h2 data-aos="fade-up"><b style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Registered Authorities</b> <img src="/static/dd.gif" alt="GIF" style="max-width: 10%; height: auto;">
+    </h2>
+</center>
+
+<br><br>
+<center>
+    <table class="table table-stripped" style="width: 50%;">
+        <thead class="table-secondary">
+            <tr>
+                <th>Authority Id</th>
+                <th>Login Id</th>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>ID Proof</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data['view'] %}
+            <tr>
+                <td>{{ i['authority_id'] }}</td>
+                <td>{{ i['login_id'] }}</td>
+                <td>{{ i['name'] }}</td>
+                <td>{{ i['designation'] }}</td>
+                <td>{{ i['phone'] }}</td>
+                <td>{{ i['email'] }}</td>
+                <td>
+                    <button class="btn btn-danger" onclick="viewPDF('{{i['id_proof']}}')">View PDF</button>
+                </td>
+                <!-- <td>{{ i['id_proof'] }}</td> -->
+                {% if i['usertype'] == 'pending' %}
+                <td><a href="?action=accept&id={{ i['authority_id'] }}" class="btn btn-success">Accept</a></td>
+                <td><a href="?action=delete&id={{ i['authority_id'] }}" class="btn btn-danger">Reject</a></td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</center>
+
+<script>
+    function viewPDF(pdfUrl) {
+        window.open(pdfUrl, '_blank');
+    }
+</script>
+
+
+<br><br><br><br>
+
+
+
+{%include 'footer.html'%}

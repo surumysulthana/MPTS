@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/reff"
+    tools:context=".User_send_request">
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField"
+        style="@style/CustomTextInputLayout"
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        android:textColorHint="#032068"
+        android:hint="Title"
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText6"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField1"
+        style="@style/CustomTextInputLayout"
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        android:textColorHint="#032068"
+        android:hint="Reason"
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText7"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/filledTextField2"-->
+<!--        style="@style/CustomTextInputLayout"-->
+
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textColorHint="#032068"-->
+<!--        android:hint="From Date"-->
+<!--        android:background="@drawable/rounded_corner_background">-->
+
+<!--        &lt;!&ndash; TextInputEditText &ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/editTextDate"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textColor="#032068"-->
+<!--            android:inputType="text"-->
+<!--            android:ems="10"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:hint=" From Date"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/filledTextField3"-->
+<!--        style="@style/CustomTextInputLayout"-->
+
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="32dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:textColorHint="#032068"-->
+<!--        android:hint="To Date"-->
+<!--        android:background="@drawable/rounded_corner_background">-->
+
+<!--        &lt;!&ndash; TextInputEditText &ndash;&gt;-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/editTextTime"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:textColor="#032068"-->
+<!--            android:inputType="text"-->
+<!--            android:ems="10"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:width="300dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:hint="To Date"
+        android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="407dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField4"
+        style="@style/CustomTextInputLayout"
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        android:textColorHint="#032068"
+        android:hint="From location"
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText8"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField5"
+        style="@style/CustomTextInputLayout"
+
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        android:textColorHint="#032068"
+        android:hint="To location"
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText9"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/filledTextField6"
+        style="@style/CustomTextInputLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_gravity="center"
+        android:textColorHint="#032068"
+        android:hint="Route.."
+        android:background="@drawable/rounded_corner_background">
+
+        <!-- TextInputEditText -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextText10"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#032068"
+            android:inputType="text"
+            android:ems="10"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextText6"-->
+<!--        -->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:hint="Title" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextText7"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:hint="Reason" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextDate"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:hint="From date"-->
+<!--        android:inputType="date" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextTime"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:hint="To date"-->
+<!--        android:inputType="time" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextText8"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:hint="From location" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextText9"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="text"-->
+<!--        android:hint="To location" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="267dp"-->
+<!--        android:layout_height="95dp"-->
+<!--        tools:srcCompat="@drawable/" />-->
+
+    <ImageView
+        android:id="@+id/imageButton"
+        android:layout_width="208dp"
+        android:layout_height="83dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/upl"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6"
+        android:layout_width="276dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#fff"
+        android:background="@drawable/button_curve"
+        android:text="REQUEST" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--    <Button-->
+<!--        android:id="@+id/button6"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Button" />-->
+</LinearLayout>

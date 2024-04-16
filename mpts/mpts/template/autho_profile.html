@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+{% if data['up'] %}
+
+    <form action="" method="post">
+        <table>
+            <tr>
+                <th>
+                    name
+                </th>
+                <td>
+                    <input type="text" name="name" value="{{data['up'][0]['name']}}">
+                </td>
+            </tr>
+            <tr>
+                <th>Desigination</th>
+                <th><input type="text" name="desi" value="{{data['up'][0]['designation']}}"></th>
+            </tr>
+            <tr><th>Phone</th>
+            <td><input type="text" name="phone" value="{{data['up'][0]['phone']}}"></td></tr>
+            <tr><th>email</th><td><input type="text" name="mail" value="{{data['up'][0]['email']}}"></td></tr>
+            <tr>
+                <th>idproof</th>
+                <td><input type="text" name="idproof" value="{{data['up'][0]['id_proof']}}"></td>
+            </tr>
+            <!-- <tr>
+                <th>username</th>
+                <td><input type="text" name="uname" ></td>
+            </tr>
+            <tr>
+                <th>password</th>
+                <td><input type="text" name="pass" value="{{data['up'][0]['pass']}}"></td>
+            </tr>
+            <tr> -->
+                <td colspan="2"><input type="submit" name="update" value="update"></td>
+            </tr>
+        </table>
+    </form>
+
+{% else %}
+ <center>   <h1>authorities</h1></center>
+ <form action="" method="post">
+    <table border="1">
+        <tr>
+        <th>authority_id</th>
+        <th>login_id</th>
+        <th>Name</th>
+        <th>Destination</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Id_Proof</th>
+    </tr>
+    
+    {% for i in data['view']%}
+    <tr>
+        <td>{{i['authority_id'] }}</td>
+        <td>{{i['login_id'] }}</td>
+        <td>{{i['name'] }}</td>
+        <td>{{i['destination'] }}</td>
+        <td>{{i['phone'] }}</td>
+        <td>{{i['email'] }}</td>
+        <td>{{i['id_proof'] }}</td>
+        <td><td><a href="?action=update&id={{i['login_id']}}">update</a></td></td>
+        
+        
+
+    </tr>
+    {%endfor%}
+    </table>
+    {% endif %}
+ </form>
+</body>
+</html>
